@@ -32,8 +32,9 @@ export default Ember.Route.extend({
         data: userParams
       });
 
-      request.then(() => this.get('session').authenticate('authenticator:oauth2', email, password))
-        .catch(() => this.controller.set('signupError', 'Signup Error.'))
+      request
+        .then(() => this.get('session').authenticate('authenticator:oauth2', email, password))
+        .catch(() => this.controller.set('signupError', 'Signup error.'))
         .finally(() => this.controller.set('isSigningUp', false));
     }
   }

@@ -46,14 +46,14 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.serverURL = 'https://red-green-api.herokuapp.com';
   }
 
   ENV.apiBaseURL = ENV.serverURL + '/' + ENV.apiNamespace;
 
   ENV['ember-simple-auth'] = {
     routeAfterAuthentication: 'dashboard',
-    routeIfAlreadAuthenticate: 'dashboard',
+    routeIfAlreadyAuthenticated: 'dashboard',
   };
 
   return ENV;

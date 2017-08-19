@@ -2,9 +2,9 @@
   <form {{action 'signup' email password on="submit"}} >
     <h2>Sign up</h2>
 
-    {{input value=email placeholder="E-mail"}}
+    {{input value=email placeholder="Type in E-mail"}}
 
-    {{input value=password type=pasword placeholder="Password"}}
+    {{input value=password type=pasword placeholder="Enter Password"}}
 
     {{#if signupError}}
       <p> {{signupError}} </p>

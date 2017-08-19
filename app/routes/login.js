@@ -1,7 +1,7 @@
 import Ember from 'ember';
-import UnAuthenticateRouteMixin from 'ember-simple-auth/mixins/unauthenticated-route-mixin';
+import UnAuthenticatedRouteMixin from 'ember-simple-auth/mixins/unauthenticated-route-mixin';
 
-export default Ember.Route.extend(UnAuthenticateRouteMixin, {
+export default Ember.Route.extend(UnAuthenticatedRouteMixin, {
   session: Ember.inject.service(),
   actions: {
     login(username, password) {
